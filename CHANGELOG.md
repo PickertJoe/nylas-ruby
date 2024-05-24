@@ -39,7 +39,7 @@
 * Add Outbox support
 * Add new `authentication_type` field in Account
 * Add support for basic authentication
-* Enable Nylas API v2.5 support
+* Enable NylasV2 API v2.5 support
 
 ### 5.8.0 / 2022-03-18
 * Improved support for `Webhook` objects
@@ -82,7 +82,7 @@
 ### 5.3.0 / 2021-08-18
 * Add support for Neural API
 * Fix issue where `Delta` did not have a header attribute for expanded headers
-* Fix ArgumentError when calling `Nylas::API#send!` due to missing double splat (**)
+* Fix ArgumentError when calling `NylasV2::API#send!` due to missing double splat (**)
 * Fix issue where server errors are not reported if HTML is returned
 * Fix issue where expanded `Thread` objects were not returning messages
 
@@ -103,7 +103,7 @@
 
 ### 5.0.0 / 2021-05-07
 
-* Send `Nylas-API-Version` header to API with latest supported version.
+* Send `NylasV2-API-Version` header to API with latest supported version.
 * Fix issue sending message using raw mime type.
 * Support for `messages.expanded.find(id)` to return expanded message.
 * Add support for hosted authentication
@@ -163,7 +163,7 @@
 * Fix issue when calling `.save` on `message` (https://github.com/nylas/nylas-ruby/pull/233)
 * Add support for Rails 6.
 * Fix issue for updating `message` with sending `label_ids` (https://github.com/nylas/nylas-ruby/pull/231)
-* Support for `when` in `Nylas::Event` for more attributes.
+* Support for `when` in `NylasV2::Event` for more attributes.
 * Add internal transfer api to support initialize related objects.
 * Fix encoding issues when downloading attachments.
 
@@ -183,10 +183,10 @@
 
 * Drop support for Ruby 2.2 and 2.3: they have reached end-of-life
 * Add support for Ruby 2.5 and 2.6
-* Add `scopes` argument to `Nylas::API#authenticate` for
+* Add `scopes` argument to `NylasV2::API#authenticate` for
   [selective sync](https://docs.nylas.com/docs/how-to-use-selective-sync)
 * Add `Account#revoke_all`
-* Add X-Nylas-Client-Id header for HTTP requests
+* Add X-NylasV2-Client-Id header for HTTP requests
 
 ### 4.2.4 / 2018-08-07
 * Enables silent addition of fields to API without impact to SDK
@@ -240,7 +240,7 @@
 
 * Deprecate the tags API
 * Remove the archive!/unarchive! methods
-* Expose `starred`, `unread`, `has_attachments` in Nylas::Thread
+* Expose `starred`, `unread`, `has_attachments` in NylasV2::Thread
 
 [full changelog](https://github.com/nylas/nylas-ruby/compare/v1.2.1...v1.3.0)
 

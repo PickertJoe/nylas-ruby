@@ -36,7 +36,7 @@ module WebhookTrigger
   JOB_FAILED = "job.failed"
 end
 
-module Nylas
+module NylasV2
   # Represents a webhook attached to your application.
   # @see https://docs.nylas.com/reference#webhooks
   class Webhook

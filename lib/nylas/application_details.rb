@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Structure to represent a Nylas Application Detail object.
+module NylasV2
+  # Structure to represent a NylasV2 Application Detail object.
   # @see https://developer.nylas.com/docs/api/#get/a/client_id
   class ApplicationDetail
     include Model::Attributable

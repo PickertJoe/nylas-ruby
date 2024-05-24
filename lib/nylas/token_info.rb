@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Structure to represent information about a Nylas access token.
+module NylasV2
+  # Structure to represent information about a NylasV2 access token.
   # @see https://developer.nylas.com/docs/api/#post/a/client_id/accounts/id/token-info
   class TokenInfo
     include Model::Attributable

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Structure to represent the time slot object from the Scheduler API
   class SchedulerTimeSlot
     include Model::Attributable

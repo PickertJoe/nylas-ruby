@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Query free/busy information for a calendar during a certain time period
   # @see https://docs.nylas.com/reference#calendars-free-busy
   class FreeBusy

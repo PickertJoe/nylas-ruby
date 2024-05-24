@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Message tracking features
   # @see https://docs.nylas.com/reference#message-tracking-overview
   class MessageTracking

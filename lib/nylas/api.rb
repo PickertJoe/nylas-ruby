@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Methods to retrieve data from the Nylas API as Ruby objects
+module NylasV2
+  # Methods to retrieve data from the NylasV2 API as Ruby objects
   class API
     attr_accessor :client
 
@@ -11,19 +11,19 @@ module Nylas
     include Logging
 
     # @param client [HttpClient] Http Client to use for retrieving data
-    # @param app_id [String] Your application id from the Nylas Dashboard
-    # @param app_secret [String] Your application secret from the Nylas Dashboard
+    # @param app_id [String] Your application id from the NylasV2 Dashboard
+    # @param app_secret [String] Your application secret from the NylasV2 Dashboard
     # @param access_token [String] (Optional) Your users access token.
-    # @param api_server [String] (Optional) Which Nylas API Server to connect to. Only change this if
-    #                            you're using a self-hosted Nylas instance.
-    # @return [Nylas::API]
+    # @param api_server [String] (Optional) Which NylasV2 API Server to connect to. Only change this if
+    #                            you're using a self-hosted NylasV2 instance.
+    # @return [NylasV2::API]
     def initialize(client: nil, app_id: nil, app_secret: nil, access_token: nil,
                    api_server: "https://api.nylas.com")
       self.client = client || HttpClient.new(app_id: app_id, app_secret: app_secret,
                                              access_token: access_token, api_server: api_server)
     end
 
-    # @return [String] A Nylas access token for that particular user.
+    # @return [String] A NylasV2 access token for that particular user.
     def authenticate(name:, email_address:, provider:, settings:, reauth_account_id: nil, scopes: nil)
       NativeAuthentication.new(api: self).authenticate(
         name: name,
@@ -159,7 +159,7 @@ module Nylas
       @components ||= ComponentCollection.new(model: Component, api: as(client.app_secret))
     end
 
-    # Revokes access to the Nylas API for the given access token
+    # Revokes access to the NylasV2 API for the given access token
     # @return [Boolean]
     def revoke(access_token)
       response = client.as(access_token).post(path: "/oauth/revoke")

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Authenticate your application using the native interface
   # @see https://docs.nylas.com/reference#native-authentication-1
   class NativeAuthentication

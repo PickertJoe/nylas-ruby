@@ -1,11 +1,11 @@
-# Contribute to Nylas
+# Contribute to NylasV2
 👍  🎉  First of all, thanks for taking the time to contribute! 🎉  👍
 
-The following is a set of guidelines for contributing to the Nylas Ruby SDK; these are guidelines, not rules, so please use your best judgement and feel free to propose changes to this document via pull request.
+The following is a set of guidelines for contributing to the NylasV2 Ruby SDK; these are guidelines, not rules, so please use your best judgement and feel free to propose changes to this document via pull request.
 
 # How to Ask a Question
 
-If you have a question about how to use the Ruby SDK, please [create an issue](https://github.com/nylas/nylas-ruby/issues) and label it as a question. If you have more general questions about the Nylas Communications Platform, or the Nylas Email, Calendar, and Contacts API, please reach out to support@nylas.com to get help.
+If you have a question about how to use the Ruby SDK, please [create an issue](https://github.com/nylas/nylas-ruby/issues) and label it as a question. If you have more general questions about the NylasV2 Communications Platform, or the NylasV2 Email, Calendar, and Contacts API, please reach out to support@nylas.com to get help.
 
 # How To Contribute
 ## Report a Bug or Request a Feature

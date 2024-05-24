@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Structure to represent Nylas's more complex Date Schema
+module NylasV2
+  # Structure to represent NylasV2's more complex Date Schema
   # @see https://docs.nylas.com/reference#contactsid
   class NylasDate
     extend Forwardable

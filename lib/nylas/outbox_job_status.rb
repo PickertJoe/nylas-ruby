@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby representation of a Nylas Outbox Job Status object
+module NylasV2
+  # Ruby representation of a NylasV2 Outbox Job Status object
   # @see https://developer.nylas.com/docs/api/#post/v2/outbox
   class OutboxJobStatus < JobStatus
     include Model

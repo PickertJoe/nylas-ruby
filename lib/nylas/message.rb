@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby representatin of a Nylas Message object
+module NylasV2
+  # Ruby representatin of a NylasV2 Message object
   # @see https://docs.nylas.com/reference#messages
   class Message
     include Model

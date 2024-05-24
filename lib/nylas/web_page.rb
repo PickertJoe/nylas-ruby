@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Structure to represent the Web Page Schema
   # @see https://docs.nylas.com/reference#contactsid
   class WebPage

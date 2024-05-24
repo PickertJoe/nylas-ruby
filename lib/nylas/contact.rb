@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # ActiveModel compliant interface for interacting with the Contacts API
   # @see https://docs.nylas.com/reference#contacts
   class Contact

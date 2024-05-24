@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Methods for Outbox functionality
   # @see https://developer.nylas.com/docs/api/#tag--Outbox
   class Outbox

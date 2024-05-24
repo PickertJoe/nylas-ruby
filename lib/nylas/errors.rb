@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   Error = Class.new(::StandardError)
 
   class ModelActionError < Error; end
@@ -33,7 +33,7 @@ module Nylas
   UnexpectedAccountAction = Class.new(Error)
   UnexpectedResponse = Class.new(Error)
 
-  # Base class to inflate the standard errors returned from the Nylas API
+  # Base class to inflate the standard errors returned from the NylasV2 API
   class APIError < Error
     attr_accessor :type
     attr_accessor :message

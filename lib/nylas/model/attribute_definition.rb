@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   module Model
     # Define a particular attribute for a given model
     class AttributeDefinition

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Structure to represent the Neural API's Signature Extraction Contact object
   # @see https://developer.nylas.com/docs/intelligence/signature-extraction/#parse-signature-response
   class NeuralSignatureContact
@@ -13,7 +13,7 @@ module Nylas
 
     attr_accessor :api
 
-    # Creates a Nylas contact object compatible with the contact endpoints.
+    # Creates a NylasV2 contact object compatible with the contact endpoints.
     # Please note if multiple names or multiple job titles were parsed only
     # the first set are used.
     def to_contact_object

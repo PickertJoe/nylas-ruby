@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Representation of a Recurrence object
   # @see https://docs.nylas.com/reference#section-recurrence
   class Recurrence

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Ensures our search requests hit the right path
   class SearchCollection < Collection
     def resources_path

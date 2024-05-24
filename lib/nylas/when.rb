@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   require "tzinfo"
 
-  # Structure to represent all the Nylas time types.
+  # Structure to represent all the NylasV2 time types.
   # @see https://docs.nylas.com/reference#section-time
   class When
     extend Forwardable

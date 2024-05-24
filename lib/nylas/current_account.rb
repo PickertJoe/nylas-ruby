@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby representation of the Nylas /account API
+module NylasV2
+  # Ruby representation of the NylasV2 /account API
   # @see https://docs.nylas.com/reference#account
   class CurrentAccount
     include Model

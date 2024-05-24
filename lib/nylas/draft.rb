@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby representatin of a Nylas Draft object
+module NylasV2
+  # Ruby representatin of a NylasV2 Draft object
   # @see https://docs.nylas.com/reference#drafts
   class Draft
     include Model

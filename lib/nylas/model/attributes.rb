@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   module Model
     # Stores the actual model data to allow for type casting and clean/dirty checking
     class Attributes
@@ -17,7 +17,7 @@ module Nylas
 
       def []=(key, value)
         data[key] = cast(key, value)
-      rescue Nylas::Registry::MissingKeyError
+      rescue NylasV2::Registry::MissingKeyError
         # Don't crash when a new attribute is added
       end
 

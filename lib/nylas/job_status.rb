@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby representation of a Nylas Job Status object
+module NylasV2
+  # Ruby representation of a NylasV2 Job Status object
   # @see https://developer.nylas.com/docs/api/#tag--Job-Status
   class JobStatus
     include Model

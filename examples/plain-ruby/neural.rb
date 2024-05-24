@@ -1,8 +1,8 @@
 require_relative '../helpers'
 
-# An executable specification that demonstrates how to use the Nylas Ruby SDK to interact with the API. It
-# follows the rough structure of the [Nylas API Reference](https://docs.nylas.com/reference).
-api = Nylas::API.new(app_id: ENV['NYLAS_APP_ID'], app_secret: ENV['NYLAS_APP_SECRET'],
+# An executable specification that demonstrates how to use the NylasV2 Ruby SDK to interact with the API. It
+# follows the rough structure of the [NylasV2 API Reference](https://docs.nylas.com/reference).
+api = NylasV2::API.new(app_id: ENV['NYLAS_APP_ID'], app_secret: ENV['NYLAS_APP_SECRET'],
                      access_token: ENV['NYLAS_ACCESS_TOKEN'])
 
 message_id = api.messages.first.id
@@ -18,7 +18,7 @@ demonstrate { sentiments[0].to_h }
 # Perform extracting a signature and parsing its contact information
 signatures = api.neural.extract_signature([message_id])
 demonstrate { signatures[0].to_h }
-# Convert the parsed contact to a Nylas contact object
+# Convert the parsed contact to a NylasV2 contact object
 contact = signatures[0].contacts.to_contact_object
 demonstrate { contact.to_h }
 
@@ -33,7 +33,7 @@ else
     # Also just pass in the file ID without a range to perform OCR on all pages
     ocr = api.neural.ocr_request(file_id, [1])
     demonstrate { ocr.to_h }
-  rescue Nylas::Error => e
+  rescue NylasV2::Error => e
     puts "#{e.class}: #{e.message}"
   end
 end
@@ -49,7 +49,7 @@ demonstrate { categorize.to_h }
 conversations = api.neural.clean_conversation([message_id])
 demonstrate { conversations[0].to_h }
 # Provide some options to the endpoint
-options = Nylas::NeuralMessageOptions.new(ignore_images: false)
+options = NylasV2::NeuralMessageOptions.new(ignore_images: false)
 conversations = api.neural.clean_conversation([message_id], options)
 demonstrate { conversations[0].to_h }
 # Parse the images from the clean conversation

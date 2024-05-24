@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   module Model
     # Allows defining of typecastable attributes on a model
     module Attributable

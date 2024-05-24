@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # An enumerable for working with index and search endpoints
   class Collection
     attr_accessor :model, :api, :constraints
@@ -126,7 +126,7 @@ module Nylas
       true
     end
 
-    # Retrieves a record. Nylas doesn't support where filters on GET so this will not take into
+    # Retrieves a record. NylasV2 doesn't support where filters on GET so this will not take into
     # consideration other query constraints, such as where clauses.
     def find(id)
       constraints.accept == "application/json" ? find_model(id) : find_raw(id)

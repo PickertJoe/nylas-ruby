@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby bindings for the Nylas Calendar API
+module NylasV2
+  # Ruby bindings for the NylasV2 Calendar API
   # @see https://docs.nylas.com/reference#calendars
   class Calendar
     include Model

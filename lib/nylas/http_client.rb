@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   require "yajl"
   require "base64"
 
-  # Plain HTTP client that can be used to interact with the Nylas API sans any type casting.
+  # Plain HTTP client that can be used to interact with the NylasV2 API sans any type casting.
   class HttpClient
     module AuthMethod
       BEARER = 1
@@ -49,15 +49,15 @@ module Nylas
     attr_reader :app_id
     attr_reader :app_secret
 
-    # @param app_id [String] Your application id from the Nylas Dashboard
-    # @param app_secret [String] Your application secret from the Nylas Dashboard
+    # @param app_id [String] Your application id from the NylasV2 Dashboard
+    # @param app_secret [String] Your application secret from the NylasV2 Dashboard
     # @param access_token [String] (Optional) Your users access token.
-    # @param api_server [String] (Optional) Which Nylas API Server to connect to. Only change this if
-    #                            you're using a self-hosted Nylas instance.
-    # @return [Nylas::HttpClient]
+    # @param api_server [String] (Optional) Which NylasV2 API Server to connect to. Only change this if
+    #                            you're using a self-hosted NylasV2 instance.
+    # @return [NylasV2::HttpClient]
     def initialize(app_id:, app_secret:, access_token: nil, api_server: "https://api.nylas.com")
       unless api_server.include?("://")
-        raise "When overriding the Nylas API server address, you must include https://"
+        raise "When overriding the NylasV2 API server address, you must include https://"
       end
 
       @api_server = api_server
@@ -66,13 +66,13 @@ module Nylas
       @app_id = app_id
     end
 
-    # @return [Nylas::HttpClient[]
+    # @return [NylasV2::HttpClient[]
     def as(access_token)
       HttpClient.new(app_id: app_id, access_token: access_token,
                      app_secret: app_secret, api_server: api_server)
     end
 
-    # Sends a request to the Nylas API and rai
+    # Sends a request to the NylasV2 API and rai
     # @param method [Symbol] HTTP method for the API call. Either :get, :post, :delete, or :patch
     # @param path [String] (Optional, defaults to nil) - Relative path from the API Base. Preferred way to
     #                      execute arbitrary or-not-yet-SDK-ified API commands.
@@ -103,7 +103,7 @@ module Nylas
 
         begin
           response = parse_response(response) if content_type == "application/json"
-        rescue Nylas::JsonParseError
+        rescue NylasV2::JsonParseError
           handle_failed_response(result: result, response: response)
           raise
         end
@@ -178,10 +178,10 @@ module Nylas
 
     def default_headers
       @default_headers ||= {
-        "X-Nylas-API-Wrapper" => "ruby",
-        "X-Nylas-Client-Id" => @app_id,
-        "Nylas-API-Version" => SUPPORTED_API_VERSION,
-        "User-Agent" => "Nylas Ruby SDK #{Nylas::VERSION} - #{RUBY_VERSION}",
+        "X-NylasV2-API-Wrapper" => "ruby",
+        "X-NylasV2-Client-Id" => @app_id,
+        "NylasV2-API-Version" => SUPPORTED_API_VERSION,
+        "User-Agent" => "NylasV2 Ruby SDK #{NylasV2::VERSION} - #{RUBY_VERSION}",
         "Content-type" => "application/json"
       }
     end
@@ -191,7 +191,7 @@ module Nylas
 
       Yajl::Parser.new(symbolize_names: true).parse(response)
     rescue Yajl::ParseError
-      raise Nylas::JsonParseError
+      raise NylasV2::JsonParseError
     end
     inform_on :parse_response, level: :debug, also_log: { result: true }
 

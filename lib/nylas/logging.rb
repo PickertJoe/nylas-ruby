@@ -5,7 +5,7 @@ begin
 rescue LoadError
 end
 
-module Nylas
+module NylasV2
   # Exposes a shared logger for debugging purposes
   module Logging
     def self.included(object)

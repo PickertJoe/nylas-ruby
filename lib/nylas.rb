@@ -116,9 +116,9 @@ require_relative "nylas/scheduler_booking_confirmation"
 require_relative "nylas/native_authentication"
 
 require_relative "nylas/filter_attributes"
-# an SDK for interacting with the Nylas API
+# an SDK for interacting with the NylasV2 API
 # @see https://docs.nylas.com/reference
-module Nylas
+module NylasV2
   Types.registry[:account] = Types::ModelType.new(model: Account)
   Types.registry[:calendar] = Types::ModelType.new(model: Calendar)
   Types.registry[:contact] = Types::ModelType.new(model: Contact)

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Nylas
+module NylasV2
   # Structure to represent a the File Schema.
   # @see https://docs.nylas.com/reference#events
   class File

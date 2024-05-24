@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby representation of a the Nylas Scheduler API
+module NylasV2
+  # Ruby representation of a the NylasV2 Scheduler API
   # @see https://developer.nylas.com/docs/api/scheduler/#overview
   class Scheduler
     include Model

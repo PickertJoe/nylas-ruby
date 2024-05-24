@@ -8,7 +8,7 @@ module GemConfig
     gem.name = name
     gem.files = Dir.glob("lib/{#{name}.rb,#{name}/**/*.rb}")
     gem.license = "MIT"
-    gem.version = Nylas::VERSION
+    gem.version = NylasV2::VERSION
     gem.platform = "ruby"
     gem.required_ruby_version = ">= 2.3"
     append_nylas_data(gem)
@@ -20,7 +20,7 @@ module GemConfig
   def self.append_nylas_data(gem)
     gem.metadata = metadata
     gem.email = "support@nylas.com"
-    gem.authors = ["Nylas, Inc."]
+    gem.authors = ["NylasV2, Inc."]
   end
 
   def self.metadata

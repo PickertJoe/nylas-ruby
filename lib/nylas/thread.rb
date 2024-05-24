@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby representation of the Nylas /threads API
+module NylasV2
+  # Ruby representation of the NylasV2 /threads API
   # @see https://docs.nylas.com/reference#threads
   class Thread
     include Model

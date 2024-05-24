@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby representation of a Nylas Room Resource object
+module NylasV2
+  # Ruby representation of a NylasV2 Room Resource object
   # @see https://developer.nylas.com/docs/api/#tag--Room-Resources
   class RoomResource
     include Model

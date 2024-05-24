@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Nylas
-  # Ruby representation of a Nylas Send Grid verified status object
+module NylasV2
+  # Ruby representation of a NylasV2 Send Grid verified status object
   # @see https://docs.nylas.com/reference#drafts
   class SendGridVerifiedStatus
     include Model::Attributable
